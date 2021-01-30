@@ -38,10 +38,16 @@ public class LecturaArchivo {
                 nombreCanton = linea_partes.get(0);
                 numeroEstablecimientos = linea_partes.get(1); 
                 numeroEstablecimientosEntero = Integer.parseInt(numeroEstablecimientos);
-                
+               
                 // agregar código aquí
-                
-                
+                nombreCanton = linea_partes.get(0);
+                numeroEstablecimientos = linea_partes.get(1);
+                numeroEstablecimientosEntero = Integer.parseInt(numeroEstablecimientos);
+                nombreCanton = nombreCanton.toLowerCase();
+                char letra = nombreCanton.charAt(0);
+                if(letra == 'a'|| letra =='e'||letra == 'i'||letra == 'o'||letra == 'u'){
+                    System.out.printf("%s%s(%d)", cadenaFinal, nombreCanton, numeroEstablecimientosEntero);
+                }
             } // fin de while
             entrada.close();
         } // fin de try
